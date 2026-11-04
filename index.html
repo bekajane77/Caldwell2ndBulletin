@@ -10,7 +10,6 @@
 :root {
   --purple: #56334f;
   --text: #252525;
-  --muted: #686868;
   --line: #dedbd8;
   --background: #faf9f7;
   --panel: #f0eeec;
@@ -34,20 +33,20 @@ body {
   margin: 0 auto;
 }
 
-/* IMAGE HEADER */
+/* DESKTOP HEADER */
 
 header {
+  background-color: #3a1c37;
   background-image:
     linear-gradient(
       90deg,
-      rgba(58, 28, 55, 0.96) 0%,
-      rgba(58, 28, 55, 0.86) 25%,
-      rgba(58, 28, 55, 0.50) 55%,
-      rgba(58, 28, 55, 0.05) 100%
+      rgba(58,28,55,.96) 0%,
+      rgba(58,28,55,.86) 25%,
+      rgba(58,28,55,.50) 55%,
+      rgba(58,28,55,.05) 100%
     ),
     url("sermon-on-the-mount.jpeg");
 
-  background-color: #3a1c37;
   background-size: cover;
   background-position: center 43%;
   background-repeat: no-repeat;
@@ -189,66 +188,72 @@ footer h2 {
   gap: 12px 24px;
 }
 
-/* MOBILE LAYOUT */
+/* MOBILE ONLY */
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
   header {
-  min-height: 0;
-  height: 280px;
-  padding: 22px;
-  background-position: 38% center;
-}
+    height: 240px;
+    min-height: 0;
+    padding: 18px 22px;
+
+    background-position: 38% center;
 
     background-image:
       linear-gradient(
         90deg,
-        rgba(58, 28, 55, 0.96) 0%,
-        rgba(58, 28, 55, 0.90) 22%,
-        rgba(58, 28, 55, 0.65) 42%,
-        rgba(58, 28, 55, 0.10) 70%,
-        rgba(58, 28, 55, 0.00) 100%
+        rgba(58,28,55,.96) 0%,
+        rgba(58,28,55,.90) 22%,
+        rgba(58,28,55,.65) 42%,
+        rgba(58,28,55,.10) 70%,
+        rgba(58,28,55,0) 100%
       ),
       url("sermon-on-the-mount.jpeg");
   }
 
   .ward {
-    font-size: 11px;
-    letter-spacing: 2px;
-    padding-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    padding-bottom: 7px;
   }
 
   header h1 {
-  font-size: 34px;
-  line-height: 1.05;
-  max-width: 260px;
-  margin: 12px 0;
-}
+    font-size: 30px;
+    line-height: 1.05;
+    max-width: 220px;
+    margin: 10px 0;
+  }
 
   header .date {
-    font-size: 11px;
-    letter-spacing: 0.8px;
+    font-size: 10px;
+    letter-spacing: .5px;
   }
 
   main {
-    padding-top: 20px;
+    padding-top: 18px;
   }
 
   .leadership {
-    gap: 16px;
+    gap: 14px;
     padding: 18px;
+  }
+
+  main h2 {
+    font-size: 24px;
+    margin-top: 28px;
   }
 
   .program-row {
     grid-template-columns: 1fr;
     gap: 2px;
+    padding: 11px 0;
   }
 
-  h2 {
-    font-size: 25px;
+  .announcement {
+    padding: 15px 0;
   }
 }
-  
+
 /* PRINT VERSION */
 
 @media print {
@@ -261,6 +266,7 @@ footer h2 {
     background: white !important;
     color: black;
     min-height: 0;
+    height: auto;
     padding: 15px 0;
   }
 
@@ -358,7 +364,7 @@ async function loadBulletin() {
 
     const data = await response.json();
 
-    // HEADER INFORMATION
+    // HEADER
 
     document.getElementById('ward-name')
       .textContent = data.ward || '';
@@ -369,7 +375,7 @@ async function loadBulletin() {
     document.getElementById('meeting-date')
       .textContent = 'Sunday, ' + (data.date || '');
 
-    // LEADERSHIP INFORMATION
+    // LEADERSHIP
 
     const leadership =
       document.getElementById('leadership');
@@ -434,7 +440,7 @@ async function loadBulletin() {
       program.appendChild(row);
     });
 
-    // WARD ANNOUNCEMENTS
+    // ANNOUNCEMENTS
 
     const announcements =
       document.getElementById('announcements');
