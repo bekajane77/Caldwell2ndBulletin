@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +13,12 @@
   --muted: #686868;
   --line: #dedbd8;
   --background: #faf9f7;
+  --panel: #f0eeec;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -24,47 +28,90 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background: linear-gradient(135deg, #32283f, #75556d);
-  color: white;
-  padding: 55px 24px;
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
+/* IMAGE HEADER */
+
+header {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(58, 28, 55, 0.96) 0%,
+      rgba(58, 28, 55, 0.86) 25%,
+      rgba(58, 28, 55, 0.50) 55%,
+      rgba(58, 28, 55, 0.05) 100%
+    ),
+    url("sermon-on-the-mount.jpg");
+
+  background-color: #3a1c37;
+  background-size: cover;
+  background-position: center 43%;
+  background-repeat: no-repeat;
+
+  color: white;
+  min-height: 350px;
+  padding: 65px 24px;
+
+  display: flex;
+  align-items: center;
 }
 
 .ward {
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 600;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e3bb64;
 }
 
 h1 {
-  font-size: clamp(34px, 7vw, 52px);
-  line-height: 1.1;
-  margin: 18px 0 10px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(38px, 7vw, 62px);
+  line-height: 1.05;
+  max-width: 420px;
+  margin: 22px 0 18px;
 }
 
-.date { font-size: 18px; }
+.date {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
-main { padding: 30px 22px; }
+/* MAIN CONTENT */
+
+main {
+  padding: 30px 22px;
+}
 
 h2 {
   color: var(--purple);
   font-size: 27px;
+  line-height: 1.25;
   margin: 40px 0 18px;
 }
+
+/* LEADERSHIP */
 
 .leadership {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  background: #f0eeec;
-  padding: 22px;
+  gap: 22px;
+  background: var(--panel);
+  padding: 24px;
   border-radius: 12px;
+}
+
+.leadership > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .label {
@@ -74,22 +121,36 @@ h2 {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
+  margin-bottom: 5px;
 }
+
+/* ORDER OF WORSHIP */
 
 .program-row {
   display: grid;
-  grid-template-columns: 42% 58%;
-  gap: 10px;
-  padding: 13px 0;
+  grid-template-columns: 40% minmax(0, 1fr);
+  gap: 15px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.program-row strong { font-size: 15px; }
+.program-row strong {
+  font-size: 15px;
+}
 
-a { color: var(--purple); }
+.program-row span {
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: var(--purple);
+  text-underline-offset: 3px;
+}
+
+/* ANNOUNCEMENTS */
 
 .announcement {
-  padding: 18px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -98,37 +159,119 @@ a { color: var(--purple); }
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.announcement h3 { margin: 5px 0; }
+.announcement h3 {
+  font-size: 19px;
+  margin: 5px 0;
+}
+
+.announcement p {
+  margin: 5px 0 10px;
+}
+
+/* FOOTER */
 
 footer {
-  background: #f0eeec;
+  background: var(--panel);
   padding: 30px 22px;
-  margin-top: 40px;
+  margin-top: 30px;
+}
+
+footer h2 {
+  margin-top: 0;
 }
 
 .resources {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 12px 24px;
 }
 
-@media (max-width: 480px) {
+/* MOBILE LAYOUT */
+
+@media (max-width: 600px) {
+  header {
+    min-height: 310px;
+    padding: 42px 22px;
+    background-position: 57% center;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(58, 28, 55, 0.94) 0%,
+        rgba(58, 28, 55, 0.78) 45%,
+        rgba(58, 28, 55, 0.25) 100%
+      ),
+      url("sermon-on-the-mount.jpg");
+  }
+
+  header h1 {
+    font-size: clamp(34px, 9vw, 48px);
+    max-width: 280px;
+  }
+
+  header .date {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .leadership {
+    gap: 18px;
+    padding: 20px;
+  }
+
   .program-row {
     grid-template-columns: 1fr;
     gap: 2px;
   }
+
+  h2 {
+    font-size: 25px;
+  }
 }
 
+/* PRINT VERSION */
+
 @media print {
-  body { background: white; font-size: 11pt; }
-  header { background: white; color: black; padding: 15px 0; }
-  main { padding: 0; }
-  h2 { margin: 20px 0 8px; }
-  .leadership { background: white; border: 1px solid #ddd; }
-  footer { background: white; }
-  a { color: black; text-decoration: none; }
+  body {
+    background: white;
+    font-size: 11pt;
+  }
+
+  header {
+    background: white !important;
+    color: black;
+    min-height: 0;
+    padding: 15px 0;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  h2 {
+    margin: 20px 0 8px;
+  }
+
+  .leadership {
+    background: white;
+    border: 1px solid #ddd;
+  }
+
+  .program-row,
+  .announcement {
+    break-inside: avoid;
+  }
+
+  footer {
+    background: white;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 </style>
 </head>
@@ -137,115 +280,59 @@ footer {
 
 <header>
   <div class="container">
-    <div class="ward">Caldwell 2nd Ward</div>
-    <h1>Sacrament Meeting</h1>
-    <div class="date">Sunday, November 8, 2026</div>
+    <div class="ward" id="ward-name">
+      Caldwell 2nd Ward
+    </div>
+
+    <h1 id="meeting-title">
+      Sacrament Meeting
+    </h1>
+
+    <div class="date" id="meeting-date">
+      Sunday, November 8, 2026
+    </div>
   </div>
 </header>
 
 <main class="container">
 
-<section class="leadership">
-  <div>
-    <span class="label">Presiding</span>
-    Bishop [Name]
-  </div>
-  <div>
-    <span class="label">Conducting</span>
-    [Name]
-  </div>
-  <div>
-    <span class="label">Chorister</span>
-    [Name]
-  </div>
-  <div>
-    <span class="label">Organist</span>
-    [Name]
-  </div>
-</section>
+  <section class="leadership" id="leadership">
+  </section>
 
-<h2>Order of Worship</h2>
+  <h2>Order of Worship</h2>
+  <section id="program"></section>
 
-<div class="program-row">
-  <strong>Opening Hymn</strong>
-  <span>No. 100 — Nearer, My God, to Thee</span>
-</div>
-
-<div class="program-row">
-  <strong>Invocation</strong>
-  <span>[Name]</span>
-</div>
-
-<div class="program-row">
-  <strong>Ward Business</strong>
-  <span></span>
-</div>
-
-<div class="program-row">
-  <strong>Sacrament Hymn</strong>
-  <span>[Hymn Number and Title]</span>
-</div>
-
-<div class="program-row">
-  <strong>Administration of the Sacrament</strong>
-  <span></span>
-</div>
-
-<div class="program-row">
-  <strong>Speaker</strong>
-  <span>[Name]</span>
-</div>
-
-<div class="program-row">
-  <strong>Speaker</strong>
-  <span>[Name]</span>
-</div>
-
-<div class="program-row">
-  <strong>Closing Hymn</strong>
-  <span>[Hymn Number and Title]</span>
-</div>
-
-<div class="program-row">
-  <strong>Benediction</strong>
-  <span>[Name]</span>
-</div>
-
-<h2>Ward Announcements</h2>
-
-<div class="announcement">
-  <time>NOVEMBER 11</time>
-  <h3>Young Women Activity</h3>
-  <p>Activity details will be announced.</p>
-</div>
-
-<div class="announcement">
-  <time>NOVEMBER 14</time>
-  <h3>Ward Service Project</h3>
-  <p>Additional information coming soon.</p>
-</div>
+  <h2>Ward Announcements</h2>
+  <section id="announcements"></section>
 
 </main>
 
 <footer>
   <div class="container">
     <h2>Ward Resources</h2>
+
     <div class="resources">
       <a href="https://www.churchofjesuschrist.org"
-         target="_blank" rel="noopener noreferrer">
-         Church Website
+         target="_blank"
+         rel="noopener noreferrer">
+        Church Website
       </a>
+
       <a href="https://www.churchofjesuschrist.org/study/music"
-         target="_blank" rel="noopener noreferrer">
-         Sacred Music
+         target="_blank"
+         rel="noopener noreferrer">
+        Sacred Music
       </a>
     </div>
   </div>
 </footer>
+
 <script>
 async function loadBulletin() {
   try {
-    const response = await fetch('bulletin.json?v=' + Date.now());
+    const response = await fetch(
+      'bulletin.json?v=' + Date.now()
+    );
 
     if (!response.ok) {
       throw new Error('Unable to load bulletin');
@@ -253,15 +340,23 @@ async function loadBulletin() {
 
     const data = await response.json();
 
-    // Update heading
-    document.querySelector('.ward').textContent = data.ward;
-    document.querySelector('h1').textContent = data.meeting;
-    document.querySelector('.date').textContent =
-      'Sunday, ' + data.date;
+    // HEADER INFORMATION
 
-    // Update leadership
-    const leadership = document.querySelector('.leadership');
-    leadership.innerHTML = '';
+    document.getElementById('ward-name')
+      .textContent = data.ward || '';
+
+    document.getElementById('meeting-title')
+      .textContent = data.meeting || '';
+
+    document.getElementById('meeting-date')
+      .textContent = 'Sunday, ' + (data.date || '');
+
+    // LEADERSHIP INFORMATION
+
+    const leadership =
+      document.getElementById('leadership');
+
+    leadership.replaceChildren();
 
     const leaders = [
       ['Presiding', data.presiding],
@@ -276,96 +371,102 @@ async function loadBulletin() {
 
       span.className = 'label';
       span.textContent = label;
+
       div.appendChild(span);
-      div.appendChild(document.createTextNode(name || ''));
+      div.appendChild(
+        document.createTextNode(name || '')
+      );
 
       leadership.appendChild(div);
     });
 
-    // Update order of worship
-    const programHeading = [...document.querySelectorAll('h2')]
-      .find(h => h.textContent === 'Order of Worship');
+    // ORDER OF WORSHIP
 
-    let row = programHeading.nextElementSibling;
+    const program =
+      document.getElementById('program');
 
-    while (row && row.classList.contains('program-row')) {
-      const next = row.nextElementSibling;
-      row.remove();
-      row = next;
-    }
+    program.replaceChildren();
 
-    data.program.forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'program-row';
+    (data.program || []).forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'program-row';
 
-      const strong = document.createElement('strong');
-      strong.textContent = item.label;
+      const label = document.createElement('strong');
+      label.textContent = item.label || '';
 
       const detail = document.createElement('span');
 
-      if (item.url) {
+      if (item.url &&
+          /^https:\/\//i.test(item.url)) {
         const link = document.createElement('a');
+
         link.href = item.url;
-        link.textContent = item.detail;
+        link.textContent = item.detail || '';
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
+
         detail.appendChild(link);
       } else {
         detail.textContent = item.detail || '';
       }
 
-      div.appendChild(strong);
-      div.appendChild(detail);
+      row.appendChild(label);
+      row.appendChild(detail);
 
-      programHeading.parentNode.insertBefore(
-        div,
-        row
-      );
+      program.appendChild(row);
     });
 
-    // Update announcements
-    const announcementHeading = [...document.querySelectorAll('h2')]
-      .find(h => h.textContent === 'Ward Announcements');
+    // WARD ANNOUNCEMENTS
 
-    announcementHeading.parentNode
-      .querySelectorAll('.announcement')
-      .forEach(el => el.remove());
+    const announcements =
+      document.getElementById('announcements');
 
-    data.announcements.forEach(item => {
+    announcements.replaceChildren();
+
+    (data.announcements || []).forEach(item => {
       const div = document.createElement('div');
       div.className = 'announcement';
 
       const time = document.createElement('time');
-      time.textContent = item.date;
+      time.textContent = item.date || '';
 
       const title = document.createElement('h3');
-      title.textContent = item.title;
+      title.textContent = item.title || '';
 
       const description = document.createElement('p');
-      description.textContent = item.description;
+      description.textContent =
+        item.description || '';
 
       div.appendChild(time);
       div.appendChild(title);
       div.appendChild(description);
 
-      if (item.url) {
+      if (item.url &&
+          /^https:\/\//i.test(item.url)) {
         const link = document.createElement('a');
+
         link.href = item.url;
         link.textContent = 'More information';
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
+
         div.appendChild(link);
       }
 
-      announcementHeading.parentNode.appendChild(div);
+      announcements.appendChild(div);
     });
 
   } catch (error) {
     console.error('Bulletin loading error:', error);
+
+    document.getElementById('program')
+      .textContent =
+      'The bulletin is temporarily unavailable. Please try refreshing the page.';
   }
 }
 
 loadBulletin();
 </script>
+
 </body>
 </html>
