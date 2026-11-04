@@ -170,10 +170,16 @@ a {
   margin: 5px 0 10px;
 }
 
+.empty-announcements {
+  color: #686868;
+  font-style: italic;
+  margin: 8px 0 20px;
+}
+
 /* SUBMISSION INFORMATION */
 
 .submission {
-  margin-top: 32px;
+  margin-top: 24px;
   padding: 20px 22px;
   border-left: 3px solid var(--purple);
   background: var(--panel);
@@ -275,7 +281,7 @@ footer h2 {
   }
 
   .submission {
-    margin-top: 24px;
+    margin-top: 20px;
     padding: 15px 17px;
   }
 }
@@ -358,13 +364,23 @@ footer h2 {
   <h2>Program</h2>
   <section id="program"></section>
 
-  <section id="announcement-section" hidden>
+  <!-- WARD ANNOUNCEMENTS: ALWAYS VISIBLE -->
+
+  <section id="announcement-section">
     <h2>Ward Announcements</h2>
-    <div id="announcements"></div>
+
+    <div id="announcements">
+      <p class="empty-announcements">
+        No announcements have been posted yet.
+      </p>
+    </div>
   </section>
+
+  <!-- SUBMISSION INFORMATION: ALWAYS VISIBLE -->
 
   <aside class="submission">
     <h3>Submit a Bulletin Announcement</h3>
+
     <p>
       Please send bulletin announcements to
       Beka Ackerschott at
@@ -489,17 +505,23 @@ async function loadBulletin() {
 
     // ANNOUNCEMENTS
 
-    const announcementSection =
-      document.getElementById('announcement-section');
-
     const announcements =
       document.getElementById('announcements');
 
     announcements.replaceChildren();
 
-    const items = data.announcements || [];
+    const items = Array.isArray(data.announcements)
+      ? data.announcements
+      : [];
 
-    announcementSection.hidden = items.length === 0;
+    if (items.length === 0) {
+      const message = document.createElement('p');
+      message.className = 'empty-announcements';
+      message.textContent =
+        'No announcements have been posted yet.';
+
+      announcements.appendChild(message);
+    }
 
     items.forEach(item => {
       const div = document.createElement('div');
