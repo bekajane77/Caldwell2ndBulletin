@@ -94,17 +94,17 @@ h2 {
   color: var(--purple);
   font-size: 27px;
   line-height: 1.25;
-  margin: 40px 0 18px;
+  margin: 34px 0 14px;
 }
 
 /* LEADERSHIP */
 
 .leadership {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
   background: var(--panel);
-  padding: 24px;
+  padding: 22px;
   border-radius: 12px;
 }
 
@@ -120,16 +120,16 @@ h2 {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
-/* ORDER OF WORSHIP */
+/* PROGRAM */
 
 .program-row {
   display: grid;
   grid-template-columns: 40% minmax(0, 1fr);
   gap: 15px;
-  padding: 14px 0;
+  padding: 11px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -149,7 +149,7 @@ a {
 /* ANNOUNCEMENTS */
 
 .announcement {
-  padding: 20px 0;
+  padding: 15px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -168,6 +168,27 @@ a {
 
 .announcement p {
   margin: 5px 0 10px;
+}
+
+/* SUBMISSION INFORMATION */
+
+.submission {
+  margin-top: 32px;
+  padding: 20px 22px;
+  border-left: 3px solid var(--purple);
+  background: var(--panel);
+  border-radius: 0 8px 8px 0;
+}
+
+.submission h3 {
+  color: var(--purple);
+  font-size: 17px;
+  margin: 0 0 6px;
+}
+
+.submission p {
+  margin: 0;
+  font-size: 15px;
 }
 
 /* FOOTER */
@@ -193,10 +214,9 @@ footer h2 {
 @media screen and (max-width: 600px) {
 
   header {
-    height: 240px;
+    height: 210px;
     min-height: 0;
-    padding: 18px 22px;
-
+    padding: 14px 22px;
     background-position: 38% center;
 
     background-image:
@@ -230,27 +250,33 @@ footer h2 {
   }
 
   main {
-    padding-top: 18px;
+    padding-top: 14px;
   }
 
   .leadership {
-    gap: 14px;
-    padding: 18px;
+    gap: 10px;
+    padding: 14px;
   }
 
   main h2 {
     font-size: 24px;
-    margin-top: 28px;
+    margin-top: 22px;
+    margin-bottom: 12px;
   }
 
   .program-row {
     grid-template-columns: 1fr;
-    gap: 2px;
-    padding: 11px 0;
+    gap: 1px;
+    padding: 8px 0;
   }
 
   .announcement {
-    padding: 15px 0;
+    padding: 12px 0;
+  }
+
+  .submission {
+    margin-top: 24px;
+    padding: 15px 17px;
   }
 }
 
@@ -284,8 +310,14 @@ footer h2 {
   }
 
   .program-row,
-  .announcement {
+  .announcement,
+  .submission {
     break-inside: avoid;
+  }
+
+  .submission {
+    background: white;
+    border-left: 2px solid #777;
   }
 
   footer {
@@ -323,11 +355,26 @@ footer h2 {
   <section class="leadership" id="leadership">
   </section>
 
-  <h2>Order of Worship</h2>
+  <h2>Program</h2>
   <section id="program"></section>
 
-  <h2>Ward Announcements</h2>
-  <section id="announcements"></section>
+  <section id="announcement-section" hidden>
+    <h2>Ward Announcements</h2>
+    <div id="announcements"></div>
+  </section>
+
+  <aside class="submission">
+    <h3>Submit a Bulletin Announcement</h3>
+    <p>
+      Please send bulletin announcements to
+      Beka Ackerschott at
+      <a href="mailto:rjackerschott@gmail.com">
+        rjackerschott@gmail.com
+      </a>
+      by Tuesday for inclusion in the
+      following Sunday's bulletin.
+    </p>
+  </aside>
 
 </main>
 
@@ -404,7 +451,7 @@ async function loadBulletin() {
       leadership.appendChild(div);
     });
 
-    // ORDER OF WORSHIP
+    // PROGRAM
 
     const program =
       document.getElementById('program');
@@ -442,12 +489,19 @@ async function loadBulletin() {
 
     // ANNOUNCEMENTS
 
+    const announcementSection =
+      document.getElementById('announcement-section');
+
     const announcements =
       document.getElementById('announcements');
 
     announcements.replaceChildren();
 
-    (data.announcements || []).forEach(item => {
+    const items = data.announcements || [];
+
+    announcementSection.hidden = items.length === 0;
+
+    items.forEach(item => {
       const div = document.createElement('div');
       div.className = 'announcement';
 
