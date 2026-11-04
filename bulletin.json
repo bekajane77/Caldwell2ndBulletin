@@ -1,28 +1,25 @@
+
 {
   "ward": "Caldwell 2nd Ward",
   "meeting": "Sacrament Meeting",
   "date": "November 8, 2026",
-  "presiding": "Bishop [Name]",
-  "conducting": "[Name]",
-  "chorister": "[Name]",
-  "organist": "[Name]",
+  "presiding": "Bishop Paul Craft",
+  "conducting": "Second Counselor Tyler Anderson",
+  "chorister": "Teresa Dougal",
+  "organist": "Izaac Scott",
   "program": [
     {
       "label": "Opening Hymn",
-      "detail": "100 — Nearer, My God, to Thee",
+      "detail": "Come, Come, Ye Saints — p. 30",
       "url": ""
     },
     {
       "label": "Invocation",
-      "detail": "[Name]"
-    },
-    {
-      "label": "Ward Business",
-      "detail": ""
+      "detail": "Kyle Luekenga"
     },
     {
       "label": "Sacrament Hymn",
-      "detail": "[Hymn Number and Title]",
+      "detail": "God, Our Father, Hear Us Pray — p. 170",
       "url": ""
     },
     {
@@ -31,34 +28,26 @@
     },
     {
       "label": "Speaker",
-      "detail": "[Name]"
+      "detail": "Lydia Harmon"
+    },
+    {
+      "label": "Intermediate Hymn",
+      "detail": "A Mighty Fortress Is Our God — p. 68",
+      "url": ""
     },
     {
       "label": "Speaker",
-      "detail": "[Name]"
+      "detail": "Evan Harmon"
     },
     {
       "label": "Closing Hymn",
-      "detail": "[Hymn Number and Title]",
+      "detail": "Lord, Dismiss Us with Thy Blessing — p. 163",
       "url": ""
     },
     {
       "label": "Benediction",
-      "detail": "[Name]"
+      "detail": "By invitation"
     }
   ],
-  "announcements": [
-    {
-      "date": "November 11",
-      "title": "Young Women Activity",
-      "description": "Activity details will be announced.",
-      "url": ""
-    },
-    {
-      "date": "November 14",
-      "title": "Ward Service Project",
-      "description": "Additional information coming soon.",
-      "url": ""
-    }
-  ]
+  "announcements": []
 }
