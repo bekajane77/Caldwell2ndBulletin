@@ -1,0 +1,64 @@
+{
+  "ward": "Caldwell 2nd Ward",
+  "meeting": "Sacrament Meeting",
+  "date": "November 8, 2026",
+  "presiding": "Bishop [Name]",
+  "conducting": "[Name]",
+  "chorister": "[Name]",
+  "organist": "[Name]",
+  "program": [
+    {
+      "label": "Opening Hymn",
+      "detail": "100 — Nearer, My God, to Thee",
+      "url": ""
+    },
+    {
+      "label": "Invocation",
+      "detail": "[Name]"
+    },
+    {
+      "label": "Ward Business",
+      "detail": ""
+    },
+    {
+      "label": "Sacrament Hymn",
+      "detail": "[Hymn Number and Title]",
+      "url": ""
+    },
+    {
+      "label": "Administration of the Sacrament",
+      "detail": ""
+    },
+    {
+      "label": "Speaker",
+      "detail": "[Name]"
+    },
+    {
+      "label": "Speaker",
+      "detail": "[Name]"
+    },
+    {
+      "label": "Closing Hymn",
+      "detail": "[Hymn Number and Title]",
+      "url": ""
+    },
+    {
+      "label": "Benediction",
+      "detail": "[Name]"
+    }
+  ],
+  "announcements": [
+    {
+      "date": "November 11",
+      "title": "Young Women Activity",
+      "description": "Activity details will be announced.",
+      "url": ""
+    },
+    {
+      "date": "November 14",
+      "title": "Ward Service Project",
+      "description": "Additional information coming soon.",
+      "url": ""
+    }
+  ]
+}
