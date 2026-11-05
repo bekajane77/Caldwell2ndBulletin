@@ -49,5 +49,42 @@
       "detail": "Tasha Howard"
     }
   ],
-  "announcements": []
+  "announcements": [
+    {
+      "date": "Saturday, November 14",
+      "title": "Ward/Stake Food Drive",
+      "description": "Please have non-perishable food items ready on your front porch by 9:00 AM for pickup by the youth.",
+      "url": ""
+    },
+    {
+      "date": "Saturday, November 14",
+      "title": "Primary Program Practice",
+      "description": "All Primary children and their teachers are invited to attend practice at the church at 1:00 PM.",
+      "url": ""
+    },
+    {
+      "date": "Sunday, November 15",
+      "title": "Primary Program",
+      "description": "The Primary Program will take place during sacrament meeting.",
+      "url": ""
+    },
+    {
+      "date": "Friday, November 20",
+      "title": "Ward Potluck",
+      "description": "Join us for a ward potluck at the church at 6:00 PM.",
+      "url": ""
+    },
+    {
+      "date": "Saturday, November 21",
+      "title": "Youth Temple Trip",
+      "description": "Youth and leaders should meet at the church at 4:00 PM for carpooling.",
+      "url": ""
+    },
+    {
+      "date": "November 23–28",
+      "title": "Stake Family Week",
+      "description": "",
+      "url": ""
+    }
+  ]
 }
