@@ -15,9 +15,7 @@
   --panel: #f0eeec;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -33,7 +31,7 @@ body {
   margin: 0 auto;
 }
 
-/* DESKTOP HEADER */
+/* HEADER */
 
 header {
   background-color: #3a1c37;
@@ -46,7 +44,6 @@ header {
       rgba(58,28,55,.05) 100%
     ),
     url("sermon-on-the-mount.jpeg");
-
   background-size: cover;
   background-position: center 43%;
   background-repeat: no-repeat;
@@ -84,9 +81,7 @@ h1 {
 
 /* MAIN CONTENT */
 
-main {
-  padding: 30px 22px;
-}
+main { padding: 30px 22px; }
 
 h2 {
   color: var(--purple);
@@ -136,13 +131,8 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
-.program-row strong {
-  font-size: 15px;
-}
-
-.program-row span {
-  overflow-wrap: anywhere;
-}
+.program-row strong { font-size: 15px; }
+.program-row span { overflow-wrap: anywhere; }
 
 /* ANNOUNCEMENTS */
 
@@ -164,9 +154,7 @@ a {
   margin: 5px 0;
 }
 
-.announcement p {
-  margin: 5px 0 10px;
-}
+.announcement p { margin: 5px 0 10px; }
 
 .empty-announcements {
   color: #686868;
@@ -180,7 +168,6 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 30px;
-  row-gap: 0;
 }
 
 .contact {
@@ -242,9 +229,7 @@ footer {
   margin-top: 30px;
 }
 
-footer h2 {
-  margin-top: 0;
-}
+footer h2 { margin-top: 0; }
 
 .resources {
   display: flex;
@@ -256,13 +241,11 @@ footer h2 {
 /* MOBILE */
 
 @media screen and (max-width: 600px) {
-
   header {
     height: 210px;
     min-height: 0;
     padding: 14px 22px;
     background-position: 38% center;
-
     background-image:
       linear-gradient(
         90deg,
@@ -293,9 +276,7 @@ footer h2 {
     letter-spacing: .5px;
   }
 
-  main {
-    padding-top: 14px;
-  }
+  main { padding-top: 14px; }
 
   .leadership {
     gap: 10px;
@@ -314,17 +295,10 @@ footer h2 {
     padding: 8px 0;
   }
 
-  .announcement {
-    padding: 12px 0;
-  }
+  .announcement { padding: 12px 0; }
 
-  .contacts {
-    grid-template-columns: 1fr;
-  }
-
-  .contact {
-    padding: 10px 0;
-  }
+  .contacts { grid-template-columns: 1fr; }
+  .contact { padding: 10px 0; }
 
   .submission {
     margin-top: 24px;
@@ -332,7 +306,7 @@ footer h2 {
   }
 }
 
-/* PRINT VERSION */
+/* PRINT */
 
 @media print {
   body {
@@ -348,13 +322,8 @@ footer h2 {
     padding: 15px 0;
   }
 
-  main {
-    padding: 0;
-  }
-
-  h2 {
-    margin: 20px 0 8px;
-  }
+  main { padding: 0; }
+  h2 { margin: 20px 0 8px; }
 
   .leadership {
     background: white;
@@ -373,9 +342,7 @@ footer h2 {
     border-left: 2px solid #777;
   }
 
-  footer {
-    background: white;
-  }
+  footer { background: white; }
 
   a {
     color: black;
@@ -392,11 +359,9 @@ footer h2 {
     <div class="ward" id="ward-name">
       Caldwell 2nd Ward
     </div>
-
     <h1 id="meeting-title">
       Sacrament Meeting
     </h1>
-
     <div class="date" id="meeting-date">
       Sunday, November 8, 2026
     </div>
@@ -407,19 +372,17 @@ footer h2 {
 
   <!-- MEETING LEADERSHIP -->
 
-  <section class="leadership" id="leadership">
-  </section>
+  <section class="leadership" id="leadership"></section>
 
   <!-- PROGRAM -->
 
   <h2>Program</h2>
   <section id="program"></section>
 
-  <!-- WARD ANNOUNCEMENTS -->
+  <!-- ANNOUNCEMENTS -->
 
   <section id="announcement-section">
     <h2>Ward Announcements</h2>
-
     <div id="announcements">
       <p class="empty-announcements">
         No announcements have been posted yet.
@@ -427,7 +390,7 @@ footer h2 {
     </div>
   </section>
 
-  <!-- WARD CONTACT DIRECTORY -->
+  <!-- WARD CONTACTS -->
 
   <section id="ward-contacts">
     <h2>Ward Leadership &amp; Contact Information</h2>
@@ -459,7 +422,9 @@ footer h2 {
       </div>
 
       <div class="contact">
-        <span class="contact-role">Ward Executive Secretary</span>
+        <span class="contact-role">
+          Ward Executive Secretary
+        </span>
         <span class="contact-name">Chris Stoddard</span>
         <a class="contact-phone" href="tel:+12082868516">
           208-286-8516
@@ -467,7 +432,17 @@ footer h2 {
       </div>
 
       <div class="contact">
-        <span class="contact-role">Elders Quorum President</span>
+        <span class="contact-role">Ward Clerk</span>
+        <span class="contact-name">Izaak Scott</span>
+        <a class="contact-phone" href="tel:+19862309590">
+          986-230-9590
+        </a>
+      </div>
+
+      <div class="contact">
+        <span class="contact-role">
+          Elders Quorum President
+        </span>
         <span class="contact-name">Mark Dougal</span>
         <a class="contact-phone" href="tel:+12082841700">
           208-284-1700
@@ -475,7 +450,9 @@ footer h2 {
       </div>
 
       <div class="contact">
-        <span class="contact-role">Relief Society President</span>
+        <span class="contact-role">
+          Relief Society President
+        </span>
         <span class="contact-name">Lara Mills</span>
         <a class="contact-phone" href="tel:+12089369091">
           208-936-9091
@@ -483,15 +460,21 @@ footer h2 {
       </div>
 
       <div class="contact">
-        <span class="contact-role">Young Women President</span>
-        <span class="contact-name">Jaqueline Muhlestein</span>
+        <span class="contact-role">
+          Young Women President
+        </span>
+        <span class="contact-name">
+          Jaqueline Muhlestein
+        </span>
         <a class="contact-phone" href="tel:+12083231298">
           208-323-1298
         </a>
       </div>
 
       <div class="contact">
-        <span class="contact-role">Sunday School President</span>
+        <span class="contact-role">
+          Sunday School President
+        </span>
         <span class="contact-name">Ryan Knudsen</span>
         <a class="contact-phone" href="tel:+17753880827">
           775-388-0827
@@ -499,8 +482,12 @@ footer h2 {
       </div>
 
       <div class="contact">
-        <span class="contact-role">Primary President</span>
-        <span class="contact-name">Mikayla McMillan</span>
+        <span class="contact-role">
+          Primary President
+        </span>
+        <span class="contact-name">
+          Mikayla McMillan
+        </span>
         <a class="contact-phone" href="tel:+18015899660">
           801-589-9660
         </a>
@@ -516,11 +503,10 @@ footer h2 {
     </div>
   </section>
 
-  <!-- BULLETIN SUBMISSION INFORMATION -->
+  <!-- BULLETIN SUBMISSION -->
 
   <aside class="submission">
     <h3>Submit a Bulletin Announcement</h3>
-
     <p>
       Please send bulletin announcements to
       Beka Ackerschott at
@@ -534,38 +520,32 @@ footer h2 {
 
 </main>
 
-<!-- WARD RESOURCES -->
+<!-- RESOURCES -->
 
 <footer>
   <div class="container">
     <h2>Ward Resources</h2>
 
     <div class="resources">
-
       <a href="https://www.churchofjesuschrist.org"
-         target="_blank"
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
         Church Website
       </a>
 
       <a href="https://www.churchofjesuschrist.org/study/music"
-         target="_blank"
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
         Sacred Music
       </a>
 
       <a href="https://calendly.com/brother-paul-craft/tithing-declaration?utm_id=97757_v0_s00_e0_tv2_a1demoo4iyrldx&amp;month=2026-11"
-         target="_blank"
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
         Sign Up for Tithing Declaration
       </a>
 
       <a href="https://lakelowellstake.setmore.com/"
-         target="_blank"
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
         Stake Temple Recommend Appointments
       </a>
-
     </div>
   </div>
 </footer>
@@ -642,12 +622,10 @@ async function loadBulletin() {
       if (item.url &&
           /^https:\/\//i.test(item.url)) {
         const link = document.createElement('a');
-
         link.href = item.url;
         link.textContent = item.detail || '';
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-
         detail.appendChild(link);
       } else {
         detail.textContent = item.detail || '';
@@ -655,7 +633,6 @@ async function loadBulletin() {
 
       row.appendChild(label);
       row.appendChild(detail);
-
       program.appendChild(row);
     });
 
@@ -675,7 +652,6 @@ async function loadBulletin() {
       message.className = 'empty-announcements';
       message.textContent =
         'No announcements have been posted yet.';
-
       announcements.appendChild(message);
     }
 
@@ -685,27 +661,25 @@ async function loadBulletin() {
 
       const time = document.createElement('time');
       time.textContent = item.date || '';
+      div.appendChild(time);
 
       const title = document.createElement('h3');
       title.textContent = item.title || '';
-
-      const description = document.createElement('p');
-      description.textContent =
-        item.description || '';
-
-      div.appendChild(time);
       div.appendChild(title);
-      div.appendChild(description);
+
+      if (item.description) {
+        const description = document.createElement('p');
+        description.textContent = item.description;
+        div.appendChild(description);
+      }
 
       if (item.url &&
           /^https:\/\//i.test(item.url)) {
         const link = document.createElement('a');
-
         link.href = item.url;
         link.textContent = 'More information';
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-
         div.appendChild(link);
       }
 
@@ -714,7 +688,6 @@ async function loadBulletin() {
 
   } catch (error) {
     console.error('Bulletin loading error:', error);
-
     document.getElementById('program')
       .textContent =
       'The bulletin is temporarily unavailable. Please try refreshing the page.';
