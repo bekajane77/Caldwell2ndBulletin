@@ -6,10 +6,11 @@
   "presiding": "Bishop Paul Craft",
   "conducting": "Second Counselor Tyler Anderson",
   "chorister": "Connie McMullen",
+  "pianist": "Izaak Scott",
   "program": [
     {
       "label": "Opening Hymn",
-      "detail": "I Know That My Savior Loves Me — p. 1021",
+      "detail": "I Know That My Savior Loves Me — #1021",
       "url": "https://www.churchofjesuschrist.org/study/music/hymns-for-home-and-church/i-know-that-my-savior-loves-me?lang=eng"
     },
     {
@@ -31,7 +32,7 @@
     },
     {
       "label": "Closing Hymn",
-      "detail": "I Will Walk with Jesus — p. 1004",
+      "detail": "I Will Walk with Jesus — #1004",
       "url": "https://www.churchofjesuschrist.org/study/music/hymns-for-home-and-church/i-will-walk-with-jesus?lang=eng"
     },
     {
@@ -61,15 +62,14 @@
     {
       "date": "Saturday, December 5",
       "title": "Light the World Giving Machines",
-      "description": "Our stake will have the opportunity to support the “Light the World” Giving Machines at Indian Creek.",
+      "description": "Our stake has the opportunity to support the Light the World Giving Machines at Indian Creek.",
       "url": ""
     },
     {
       "date": "Sunday, December 6",
       "title": "First Presidency Christmas Devotional",
-      "description": "The First Presidency Christmas devotional begins at 6:00 PM.",
+      "description": "Join the First Presidency Christmas Devotional at 6:00 PM.",
       "url": ""
     }
-  ],
-  "pianist": "Izaak Scott"
+  ]
 }
