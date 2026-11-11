@@ -15,7 +15,9 @@
   --panel: #f0eeec;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -81,7 +83,9 @@ h1 {
 
 /* MAIN CONTENT */
 
-main { padding: 30px 22px; }
+main {
+  padding: 30px 22px;
+}
 
 h2 {
   color: var(--purple);
@@ -131,8 +135,13 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
-.program-row strong { font-size: 15px; }
-.program-row span { overflow-wrap: anywhere; }
+.program-row strong {
+  font-size: 15px;
+}
+
+.program-row span {
+  overflow-wrap: anywhere;
+}
 
 /* ANNOUNCEMENTS */
 
@@ -154,7 +163,9 @@ a {
   margin: 5px 0;
 }
 
-.announcement p { margin: 5px 0 10px; }
+.announcement p {
+  margin: 5px 0 10px;
+}
 
 .empty-announcements {
   color: #686868;
@@ -229,7 +240,9 @@ footer {
   margin-top: 30px;
 }
 
-footer h2 { margin-top: 0; }
+footer h2 {
+  margin-top: 0;
+}
 
 .resources {
   display: flex;
@@ -276,7 +289,9 @@ footer h2 { margin-top: 0; }
     letter-spacing: .5px;
   }
 
-  main { padding-top: 14px; }
+  main {
+    padding-top: 14px;
+  }
 
   .leadership {
     gap: 10px;
@@ -295,10 +310,17 @@ footer h2 { margin-top: 0; }
     padding: 8px 0;
   }
 
-  .announcement { padding: 12px 0; }
+  .announcement {
+    padding: 12px 0;
+  }
 
-  .contacts { grid-template-columns: 1fr; }
-  .contact { padding: 10px 0; }
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    padding: 10px 0;
+  }
 
   .submission {
     margin-top: 24px;
@@ -322,8 +344,13 @@ footer h2 { margin-top: 0; }
     padding: 15px 0;
   }
 
-  main { padding: 0; }
-  h2 { margin: 20px 0 8px; }
+  main {
+    padding: 0;
+  }
+
+  h2 {
+    margin: 20px 0 8px;
+  }
 
   .leadership {
     background: white;
@@ -342,7 +369,9 @@ footer h2 { margin-top: 0; }
     border-left: 2px solid #777;
   }
 
-  footer { background: white; }
+  footer {
+    background: white;
+  }
 
   a {
     color: black;
@@ -363,7 +392,7 @@ footer h2 { margin-top: 0; }
       Sacrament Meeting
     </h1>
     <div class="date" id="meeting-date">
-      Sunday, November 8, 2026
+      Sunday, November 15, 2026
     </div>
   </div>
 </header>
@@ -527,25 +556,37 @@ footer h2 { margin-top: 0; }
     <h2>Ward Resources</h2>
 
     <div class="resources">
+
       <a href="https://www.churchofjesuschrist.org"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Church Website
       </a>
 
       <a href="https://www.churchofjesuschrist.org/study/music"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Sacred Music
       </a>
 
       <a href="https://calendly.com/brother-paul-craft/tithing-declaration?utm_id=97757_v0_s00_e0_tv2_a1demoo4iyrldx&amp;month=2026-11"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Sign Up for Tithing Declaration
       </a>
 
       <a href="https://lakelowellstake.setmore.com/"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Stake Temple Recommend Appointments
       </a>
+
+      <a href="https://www.churchofjesuschrist.org/callings/safety/protecting-children-and-youth?lang=eng"
+         target="_blank"
+         rel="noopener noreferrer">
+        Protecting Children &amp; Youth
+      </a>
+
     </div>
   </div>
 </footer>
@@ -585,7 +626,7 @@ async function loadBulletin() {
       ['Presiding', data.presiding],
       ['Conducting', data.conducting],
       ['Chorister', data.chorister],
-      ['Organist', data.organist]
+      ['Pianist', data.pianist]
     ];
 
     leaders.forEach(([label, name]) => {
