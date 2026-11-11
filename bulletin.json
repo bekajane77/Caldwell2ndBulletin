@@ -2,72 +2,44 @@
 {
   "ward": "Caldwell 2nd Ward",
   "meeting": "Sacrament Meeting",
-  "date": "November 8, 2026",
+  "date": "November 15, 2026",
   "presiding": "Bishop Paul Craft",
   "conducting": "Second Counselor Tyler Anderson",
-  "chorister": "Teresa Dougal",
-  "organist": "Izaak Scott",
+  "chorister": "Connie McMullen",
   "program": [
     {
       "label": "Opening Hymn",
-      "detail": "Come, Come, Ye Saints — p. 30",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/come-come-ye-saints?lang=eng"
+      "detail": "I Know That My Savior Loves Me — p. 1021",
+      "url": "https://www.churchofjesuschrist.org/study/music/hymns-for-home-and-church/i-know-that-my-savior-loves-me?lang=eng"
     },
     {
       "label": "Invocation",
-      "detail": "Kyle Luekenga"
+      "detail": "By invitation"
     },
     {
       "label": "Sacrament Hymn",
-      "detail": "God, Our Father, Hear Us Pray — p. 170",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/god-our-father-hear-us-pray?lang=eng"
+      "detail": "Jesus of Nazareth, Savior and King — p. 181",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/jesus-of-nazareth-savior-and-king?lang=eng"
     },
     {
       "label": "Administration of the Sacrament",
       "detail": ""
     },
     {
-      "label": "Speaker",
-      "detail": "Lydia Harmon"
-    },
-    {
-      "label": "Intermediate Hymn",
-      "detail": "A Mighty Fortress Is Our God — p. 68",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/a-mighty-fortress-is-our-god?lang=eng"
-    },
-    {
-      "label": "Speaker",
-      "detail": "Evan Harmon"
+      "label": "Primary Program",
+      "detail": ""
     },
     {
       "label": "Closing Hymn",
-      "detail": "Lord, Dismiss Us with Thy Blessing — p. 163",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/lord-dismiss-us-with-thy-blessing?lang=eng"
+      "detail": "I Will Walk with Jesus — p. 1004",
+      "url": "https://www.churchofjesuschrist.org/study/music/hymns-for-home-and-church/i-will-walk-with-jesus?lang=eng"
     },
     {
       "label": "Benediction",
-      "detail": "Tasha Howard"
+      "detail": "By invitation"
     }
   ],
   "announcements": [
-    {
-      "date": "Saturday, November 14",
-      "title": "Ward/Stake Food Drive",
-      "description": "Please have non-perishable food items ready on your front porch by 9:00 AM for pickup by the youth.",
-      "url": ""
-    },
-    {
-      "date": "Saturday, November 14",
-      "title": "Primary Program Practice",
-      "description": "All Primary children and their teachers are invited to attend practice at the church at 1:00 PM.",
-      "url": ""
-    },
-    {
-      "date": "Sunday, November 15",
-      "title": "Primary Program",
-      "description": "The Primary Program will take place during sacrament meeting.",
-      "url": ""
-    },
     {
       "date": "Friday, November 20",
       "title": "Ward Potluck",
@@ -85,6 +57,19 @@
       "title": "Stake Family Week",
       "description": "",
       "url": ""
+    },
+    {
+      "date": "Saturday, December 5",
+      "title": "Light the World Giving Machines",
+      "description": "Our stake will have the opportunity to support the “Light the World” Giving Machines at Indian Creek.",
+      "url": ""
+    },
+    {
+      "date": "Sunday, December 6",
+      "title": "First Presidency Christmas Devotional",
+      "description": "The First Presidency Christmas devotional begins at 6:00 PM.",
+      "url": ""
     }
-  ]
+  ],
+  "pianist": "Izaak Scott"
 }
