@@ -622,12 +622,14 @@ async function loadBulletin() {
 
     leadership.replaceChildren();
 
-    const leaders = [
-      ['Presiding', data.presiding],
-      ['Conducting', data.conducting],
-      ['Chorister', data.chorister],
-      ['Pianist', data.pianist]
-    ];
+
+const leaders = [
+  ['Presiding', data.presiding],
+  ['Conducting', data.conducting],
+  ['Chorister', data.chorister],
+  ['Organist', data.organist]
+];
+
 
     leaders.forEach(([label, name]) => {
       const div = document.createElement('div');
