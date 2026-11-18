@@ -2,16 +2,16 @@
 {
   "ward": "Caldwell 2nd Ward",
   "meeting": "Sacrament Meeting",
-  "date": "November 15, 2026",
+  "date": "November 22, 2026",
   "presiding": "Bishop Paul Craft",
   "conducting": "Second Counselor Tyler Anderson",
-  "chorister": "Connie McMullin",
-  "pianist": "Izaak Scott",
+  "chorister": "Arlene Holden",
+  "organist": "Izaak Scott",
   "program": [
     {
       "label": "Opening Hymn",
-      "detail": "I Know That My Savior Loves Me — #1021",
-      "url": "https://www.churchofjesuschrist.org/study/music/hymns-for-home-and-church/i-know-that-my-savior-loves-me?lang=eng"
+      "detail": "Prayer of Thanksgiving — p. 93",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/prayer-of-thanksgiving?lang=eng"
     },
     {
       "label": "Invocation",
@@ -19,21 +19,30 @@
     },
     {
       "label": "Sacrament Hymn",
-      "detail": "Jesus of Nazareth, Savior and King — p. 181",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/jesus-of-nazareth-savior-and-king?lang=eng"
+      "detail": "There Is a Green Hill Far Away — p. 194",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/there-is-a-green-hill-far-away?lang=eng"
     },
     {
       "label": "Administration of the Sacrament",
       "detail": ""
     },
     {
-      "label": "Primary Program",
-      "detail": ""
+      "label": "Speaker",
+      "detail": "Mandy Anderson"
+    },
+    {
+      "label": "Intermediate Hymn",
+      "detail": "For the Beauty of the Earth — p. 92",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/for-the-beauty-of-the-earth?lang=eng"
+    },
+    {
+      "label": "Speaker",
+      "detail": "Lara Mills"
     },
     {
       "label": "Closing Hymn",
-      "detail": "I Will Walk with Jesus — #1004",
-      "url": "https://www.churchofjesuschrist.org/study/music/hymns-for-home-and-church/i-will-walk-with-jesus?lang=eng"
+      "detail": "Come, Ye Thankful People — p. 94",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/come-ye-thankful-people?lang=eng"
     },
     {
       "label": "Benediction",
@@ -42,21 +51,15 @@
   ],
   "announcements": [
     {
-      "date": "Friday, November 20",
-      "title": "Ward Potluck",
-      "description": "Join us for a ward potluck at the church at 6:00 PM.",
-      "url": ""
-    },
-    {
-      "date": "Saturday, November 21",
-      "title": "Youth Temple Trip",
-      "description": "Youth and leaders should meet at the church at 4:00 PM for carpooling.",
-      "url": ""
-    },
-    {
       "date": "November 23–28",
       "title": "Stake Family Week",
       "description": "",
+      "url": ""
+    },
+    {
+      "date": "Thursday, December 3",
+      "title": "Relief Society Activity",
+      "description": "There will be a Relief Society activity at 7:00 PM.",
       "url": ""
     },
     {
@@ -68,7 +71,13 @@
     {
       "date": "Sunday, December 6",
       "title": "First Presidency Christmas Devotional",
-      "description": "Join the First Presidency Christmas Devotional at 6:00 PM.",
+      "description": "The First Presidency Christmas Devotional will be held at 6:00 PM.",
+      "url": ""
+    },
+    {
+      "date": "Friday, December 11",
+      "title": "Ward Christmas Party",
+      "description": "Join us at the church at 6:00 PM for dinner and a special Christmas program.",
       "url": ""
     }
   ]
