@@ -2,16 +2,16 @@
 {
   "ward": "Caldwell 2nd Ward",
   "meeting": "Sacrament Meeting",
-  "date": "November 22, 2026",
+  "date": "November 29, 2026",
   "presiding": "Bishop Paul Craft",
   "conducting": "Second Counselor Tyler Anderson",
-  "chorister": "Arlene Holden",
+  "chorister": "Teresa Dougal",
   "organist": "Izaak Scott",
   "program": [
     {
       "label": "Opening Hymn",
-      "detail": "Prayer of Thanksgiving — p. 93",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/prayer-of-thanksgiving?lang=eng"
+      "detail": "With Wondering Awe — p. 210",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/with-wondering-awe?lang=eng"
     },
     {
       "label": "Invocation",
@@ -19,8 +19,8 @@
     },
     {
       "label": "Sacrament Hymn",
-      "detail": "There Is a Green Hill Far Away — p. 194",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/there-is-a-green-hill-far-away?lang=eng"
+      "detail": "Behold the Great Redeemer Die — p. 191",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/behold-the-great-redeemer-die?lang=eng"
     },
     {
       "label": "Administration of the Sacrament",
@@ -28,21 +28,25 @@
     },
     {
       "label": "Speaker",
-      "detail": "Mandy Anderson"
-    },
-    {
-      "label": "Intermediate Hymn",
-      "detail": "For the Beauty of the Earth — p. 92",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/for-the-beauty-of-the-earth?lang=eng"
+      "detail": "Taysom Stoddard"
     },
     {
       "label": "Speaker",
-      "detail": "Lara Mills"
+      "detail": "Lydia Anderson"
+    },
+    {
+      "label": "Intermediate Hymn",
+      "detail": "Come, Lord Jesus — #1018",
+      "url": "https://www.churchofjesuschrist.org/study/music/hymns-for-home-and-church/come-lord-jesus?lang=eng"
+    },
+    {
+      "label": "Speaker",
+      "detail": "Connie McMullin"
     },
     {
       "label": "Closing Hymn",
-      "detail": "Come, Ye Thankful People — p. 94",
-      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/come-ye-thankful-people?lang=eng"
+      "detail": "Angels We Have Heard on High — p. 203",
+      "url": "https://www.churchofjesuschrist.org/study/manual/hymns/angels-we-have-heard-on-high?lang=eng"
     },
     {
       "label": "Benediction",
@@ -50,12 +54,6 @@
     }
   ],
   "announcements": [
-    {
-      "date": "November 23–28",
-      "title": "Stake Family Week",
-      "description": "",
-      "url": ""
-    },
     {
       "date": "Thursday, December 3",
       "title": "Relief Society Activity",
